@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloquent Javascript sandbox</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js-factorial.js"></script>
+</head>
+<body>
+    <h1>Eloquent JavaScript Exercises</h1>
+
+    <section class="section-class">
+        <h2>Write a loop that makes seven calls to console.log to output the following triangle:</h2>
+        <pre class="precode">        
+            for (let line = "#"; line.length &#60 8; line += "#") { <br>
+            console.log(line); <br>
+            }
+        </pre>
+    
+        <p class="output">        
+            # <br>
+            ## <br>
+            ### <br>
+            #### <br>
+            ##### <br>
+            ###### <br>
+            ####### <br>
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2>FizzBuzz</h2>
+
+        <pre class="precode">        
+            for (let i = 1; i &#60 101; i++) { <br>
+                if (i % 15 == 0) console.log("FizzBuzz"); <br>
+                else if (i % 3 == 0) console.log("Fizz"); <br>
+                else if (i % 5 == 0) console.log("Buzz"); <br>
+                else console.log(i); <br>
+            }
+        </pre>
+
+        <p class="output">        
+            Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+            When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2>Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.</h2>
+        <pre class="precode">        
+            let size = 8; <br>
+            let field = ""; <br>
+            for (let i = 0; i &#60 size; i++) { <br>
+                for (let y = 0; y &#60 size; y++) { <br>
+                if ((i + y) % 2 == 0) { <br>
+                    field += " "; <br>
+                } else { <br>
+                    field += "#"; <br>
+                } <br>
+                } <br>
+                field += "\n"; <br>
+            } <br>
+            console.log(field); <br>
+        </pre>
+    
+        <pre class="output">
+             # # # #
+            # # # # 
+             # # # #
+            # # # # 
+             # # # #
+            # # # # 
+             # # # #
+            # # # #
+        </pre>
+    </section>
+
+</body>
+</html>
