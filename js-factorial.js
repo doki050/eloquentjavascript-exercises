@@ -174,3 +174,10 @@ console.log(deepEqual(obj, {here: 1, object: 2}));
 // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // → true
+console.log("\n")
+
+//10.
+// Flattening
+let arrays = [[1, 2, 3], [4, 5], [6]];
+console.log(arrays.reduce((flat, current) => flat.concat(current), []))
+

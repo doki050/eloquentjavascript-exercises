@@ -237,15 +237,16 @@
     </section>
 
     <section class="section-class">
-        <h2></h2>
+        <h2>Flattening</h2>
 
         <pre class="precode">        
-
+            let arrays = [[1, 2, 3], [4, 5], [6]];
+            console.log(arrays.reduce((flat, current) => flat.concat(current), []))
         </pre>
 
         <p class="output">        
-            
-        </p>
+            [1, 2, 3, 4, 5, 6]
+        </p>    
     </section>
     
 </body>
