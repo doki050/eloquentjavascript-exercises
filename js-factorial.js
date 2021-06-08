@@ -117,5 +117,32 @@ function customSum(array) {
   }
   return sum;
 }
-console.log(customSum(customRange(1, 10, 1)))
+console.log(customSum(customRange(1, 10, 1)));
+console.log("\n");
 
+//8.
+//Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace.
+function reverseArray(array) {
+  let output = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    output.push(array[i]);
+  }
+  return output;
+}
+
+console.log(reverseArray(["Apple", "Banana", "Citron"]));
+// → ["C", "B", "A"];
+
+function reverseArrayInPlace(array) {
+  for (let i = 0; i < Math.floor(array.length / 2); i++) {
+    let old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}
+
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]

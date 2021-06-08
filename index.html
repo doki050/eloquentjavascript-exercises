@@ -14,8 +14,8 @@
     <section class="section-class">
         <h2>Write a loop that makes seven calls to console.log to output the following triangle:</h2>
         <pre class="precode">        
-            for (let line = "#"; line.length &#60 8; line += "#") { <br>
-            console.log(line); <br>
+            for (let line = "#"; line.length &#60 8; line += "#") { 
+            console.log(line); 
             }
         </pre>
     
@@ -34,11 +34,11 @@
         <h2>FizzBuzz</h2>
 
         <pre class="precode">        
-            for (let i = 1; i &#60 101; i++) { <br>
-                if (i % 15 == 0) console.log("FizzBuzz"); <br>
-                else if (i % 3 == 0) console.log("Fizz"); <br>
-                else if (i % 5 == 0) console.log("Buzz"); <br>
-                else console.log(i); <br>
+            for (let i = 1; i &#60 101; i++) { 
+                if (i % 15 == 0) console.log("FizzBuzz"); 
+                else if (i % 3 == 0) console.log("Fizz"); 
+                else if (i % 5 == 0) console.log("Buzz"); 
+                else console.log(i); 
             }
         </pre>
 
@@ -51,19 +51,19 @@
     <section class="section-class">
         <h2>Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.</h2>
         <pre class="precode">        
-            let size = 8; <br>
-            let field = ""; <br>
-            for (let i = 0; i &#60 size; i++) { <br>
-                for (let y = 0; y &#60 size; y++) { <br>
-                if ((i + y) % 2 == 0) { <br>
-                    field += " "; <br>
-                } else { <br>
-                    field += "#"; <br>
-                } <br>
-            } <br>
-                field += "\n"; <br>
-            } <br>
-            console.log(field); <br>
+            let size = 8; 
+            let field = ""; 
+            for (let i = 0; i &#60 size; i++) { 
+                for (let y = 0; y &#60 size; y++) { 
+                if ((i + y) % 2 == 0) { 
+                    field += " "; 
+                } else { 
+                    field += "#"; 
+                } 
+            } 
+                field += "\n"; 
+            } 
+            console.log(field);
         </pre>
     
         <pre class="output">
@@ -82,9 +82,9 @@
         <h2>Function min(a, b) that takes two arguments and returns their minimum. </h2>
 
         <pre class="precode">        
-            function min(a, b) { <br>
-                return a &#60 b ? a : b; <br>
-              } <br>
+            function min(a, b) { 
+                return a &#60 b ? a : b; 
+              } 
         </pre>
 
         <p class="output">        
@@ -99,11 +99,11 @@
         <h2>Define a recursive function / The function should accept a single parameter (a positive, whole number) and return a Boolean.</h2>
 
         <pre class="precode">        
-            function isEven(n) { <br>
-                if (n == 0) return true; <br>
-                else if (n == 1)  return false; <br> 
-                else if (n &#60 0) return isEven( -n ); <br>
-                else return isEven( n - 2 ); <br>
+            function isEven(n) { 
+                if (n == 0) return true; 
+                else if (n == 1)  return false; 
+                else if (n &#60 0) return isEven( -n ); 
+                else return isEven( n - 2 ); 
             }
         </pre>
 
@@ -121,19 +121,19 @@
         <h2>Write functions that count how many Char is in a Word ?</h2>
 
         <pre class="precode">        
-            function countChar(givenString, charToFind) { <br>
-                countNumber = 0; <br>
-                for(let i = 0; i &#60 givenString.length; i++) { <br>
-                  if (givenString[i] === charToFind) { <br>
-                    countNumber++; <br>
-                  } <br> 
-                } <br>
-                return countNumber; <br>
-              } <br>
+            function countChar(givenString, charToFind) { 
+                countNumber = 0; 
+                for(let i = 0; i &#60 givenString.length; i++) { 
+                  if (givenString[i] === charToFind) { 
+                    countNumber++; 
+                  } 
+                } 
+                return countNumber; 
+              }
 
-            function countBs2(string) { <br>
-                return countChar(string, "B"); <br>
-            }  <br>
+            function countBs2(string) { 
+                return countChar(string, "B"); 
+            }  
         </pre>
 
         <p class="output">        
@@ -146,23 +146,23 @@
         <h2>The Sum of Range</h2>
 
         <pre class="precode">        
-            function customRange(start, end, step = start &#60 end ? 1 : -1) { <br>
-                let numbers = []; <br>
-                if (step > 0) { <br>
-                  for (let i = start; i &#60= end; i += step) numbers.push(i); <br>
-                } else { <br>
-                  for (let i = start; i >= end; i += step) numbers.push(i); <br>
-                } <br>
-                return numbers; <br>
-              } <br>
-              <br>
-              function customSum(array) { <br>
-                let sum = 0; <br>
-                for(let value of array) { <br>
-                  sum += value <br>
-                } <br>
-                return sum; <br>
-              } <br>
+            function customRange(start, end, step = start &#60 end ? 1 : -1) { 
+                let numbers = []; 
+                if (step > 0) { 
+                  for (let i = start; i &#60= end; i += step) numbers.push(i); 
+                } else { 
+                  for (let i = start; i >= end; i += step) numbers.push(i); 
+                } 
+                return numbers; 
+              } 
+              
+              function customSum(array) { 
+                let sum = 0; 
+                for(let value of array) {
+                  sum += value
+                }
+                return sum;
+              } 
         </pre>
 
         <p class="output">        
@@ -172,14 +172,34 @@
     </section>
 
     <section class="section-class">
-        <h2></h2>
+        <h2>Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace.</h2>
 
         <pre class="precode">        
+            function reverseArray(array) {
+                let output = [];
+                for (let i = array.length - 1; i >= 0; i--) {
+                  output.push(array[i]);
+                }
+                return output;
+              }
 
+              function reverseArrayInPlace(array) {
+                for (let i = 0; i &#60 Math.floor(array.length / 2); i++) {
+                  let old = array[i];
+                  array[i] = array[array.length - 1 - i];
+                  array[array.length - 1 - i] = old;
+                }
+                return array;
+              }
         </pre>
 
         <p class="output">        
-            
+            console.log(reverseArray(["Apple", "Banana", "Citron"]));<br> 
+            // → ["Citron", "Banana", "Apple"]; <br> 
+            let arrayValue = [1, 2, 3, 4, 5]; <br>
+            reverseArrayInPlace(arrayValue); <br>
+            console.log(arrayValue); <br>
+            // → [5, 4, 3, 2, 1] <br>
         </p>
     </section>
 
