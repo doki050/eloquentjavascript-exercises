@@ -60,7 +60,7 @@
                 } else { <br>
                     field += "#"; <br>
                 } <br>
-                } <br>
+            } <br>
                 field += "\n"; <br>
             } <br>
             console.log(field); <br>
@@ -142,5 +142,70 @@
         </p>
     </section>
 
+    <section class="section-class">
+        <h2>The Sum of Range</h2>
+
+        <pre class="precode">        
+            function customRange(start, end, step = start &#60 end ? 1 : -1) { <br>
+                let numbers = []; <br>
+                if (step > 0) { <br>
+                  for (let i = start; i &#60= end; i += step) numbers.push(i); <br>
+                } else { <br>
+                  for (let i = start; i >= end; i += step) numbers.push(i); <br>
+                } <br>
+                return numbers; <br>
+              } <br>
+              <br>
+              function customSum(array) { <br>
+                let sum = 0; <br>
+                for(let value of array) { <br>
+                  sum += value <br>
+                } <br>
+                return sum; <br>
+              } <br>
+        </pre>
+
+        <p class="output">        
+            console.log(customSum(customRange(1, 10, 1))) <br>
+            // → 55 <br>
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2></h2>
+
+        <pre class="precode">        
+
+        </pre>
+
+        <p class="output">        
+            
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2></h2>
+
+        <pre class="precode">        
+
+        </pre>
+
+        <p class="output">        
+            
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2></h2>
+
+        <pre class="precode">        
+
+        </pre>
+
+        <p class="output">        
+            
+        </p>
+    </section>
+    
 </body>
 </html>

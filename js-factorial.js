@@ -39,8 +39,7 @@ console.log(min(0, 10));
 // -> 0
 console.log(min(0, -10));
 // -> -10
-
-console.clear();
+console.log("\n");
 
 //5.
 // Define a recursive function / The function should accept a single parameter (a positive, whole number) and return a Boolean.
@@ -58,8 +57,6 @@ console.log(isEven(75));
 console.log(isEven(-1));
 // → false
 
-console.clear();
-
 //6.
 // Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
 function countBs(str) {
@@ -71,7 +68,6 @@ function countBs(str) {
   }
   return count;
 }
-console.log(countBs("Benjamin"))
 
 //6.B
 /* Next, write a function called countChar that behaves like countBs,
@@ -88,11 +84,6 @@ function countChar(givenString, charToFind) {
   return countNumber;
 }
 
-console.log(countBs("BBC"));
-// → 2
-console.log(countChar("kakkerlak", "k"));
-// → 4
-
 //6.c
 function countBs2(string) {
   return countChar(string, "B");
@@ -101,5 +92,30 @@ function countBs2(string) {
 console.log("\n")
 console.log(countBs("Benjamin"));
 // → 1
-console.log(countChar("kakkerlak", "k"));
-// → 4
+console.log("\n");
+
+// 7.
+// Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
+function customRange(start, end, step = start < end ? 1 :_-1) {
+  let numbers = [];
+  if (step > 0) {
+    for (let i = start; i <= end; i += step) numbers.push(i);
+  } else {
+    for (let i = start; i >= end; i += step) numbers.push(i);
+  }
+  return numbers;
+}
+
+//console.log(customRange(1, 10));
+
+// 7.b
+//write a sum function that takes an array of numbers and returns the sum of these numbers
+function customSum(array) {
+  let sum = 0;
+  for(let value of array) {
+    sum += value
+  }
+  return sum;
+}
+console.log(customSum(customRange(1, 10, 1)))
+
