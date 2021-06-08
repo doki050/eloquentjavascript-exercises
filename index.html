@@ -78,5 +78,69 @@
         </pre>
     </section>
 
+    <section class="section-class">
+        <h2>Function min(a, b) that takes two arguments and returns their minimum. </h2>
+
+        <pre class="precode">        
+            function min(a, b) { <br>
+                return a &#60 b ? a : b; <br>
+              } <br>
+        </pre>
+
+        <p class="output">        
+            console.log(min(0, 10)); <br>
+            //  0 <br>
+            console.log(min(0, -10)); <br>
+            // -10 <br>
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2>Define a recursive function / The function should accept a single parameter (a positive, whole number) and return a Boolean.</h2>
+
+        <pre class="precode">        
+            function isEven(n) { <br>
+                if (n == 0) return true; <br>
+                else if (n == 1)  return false; <br> 
+                else if (n &#60 0) return isEven( -n ); <br>
+                else return isEven( n - 2 ); <br>
+            }
+        </pre>
+
+        <p class="output">        
+            console.log(isEven(50)); <br>
+            // → true <br>
+            console.log(isEven(75)); <br>
+            // → false <br>
+            console.log(isEven(-1)); <br>
+            // → false <br>
+        </p>
+    </section>
+
+    <section class="section-class">
+        <h2>Write functions that count how many Char is in a Word ?</h2>
+
+        <pre class="precode">        
+            function countChar(givenString, charToFind) { <br>
+                countNumber = 0; <br>
+                for(let i = 0; i &#60 givenString.length; i++) { <br>
+                  if (givenString[i] === charToFind) { <br>
+                    countNumber++; <br>
+                  } <br> 
+                } <br>
+                return countNumber; <br>
+              } <br>
+
+            function countBs2(string) { <br>
+                return countChar(string, "B"); <br>
+            }  <br>
+        </pre>
+
+        <p class="output">        
+            console.log(countBs("Benjamin")); <br>
+            // → 1 <br>
+        </p>
+    </section>
+
 </body>
 </html>

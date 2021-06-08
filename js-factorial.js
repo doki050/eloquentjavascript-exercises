@@ -29,3 +29,77 @@ for (let i = 0; i < size; i++) {
 }
 console.log(field);
 console.log("\n");
+
+//4.
+// Function min that takes two arguments and returns their minimum. 
+function min(a, b) {
+  return a < b ? a : b;
+}
+console.log(min(0, 10));
+// -> 0
+console.log(min(0, -10));
+// -> -10
+
+console.clear();
+
+//5.
+// Define a recursive function / The function should accept a single parameter (a positive, whole number) and return a Boolean.
+function isEven(n) {
+  if (n == 0) return true;
+  else if (n == 1)  return false; 
+  else if (n < 0) return isEven( -n );
+  else return isEven( n - 2 );
+}
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-1));
+// → false
+
+console.clear();
+
+//6.
+// Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
+function countBs(str) {
+  count = 0;
+  for(let i = 0; i < str.length; i++) {
+    if (str[i] === "B") {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countBs("Benjamin"))
+
+//6.B
+/* Next, write a function called countChar that behaves like countBs,
+except it takes a second argument that indicates the character that is to be counted
+(rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
+*/
+function countChar(givenString, charToFind) {
+  countNumber = 0;
+  for(let i = 0; i < givenString.length; i++) {
+    if (givenString[i] === charToFind) {
+      countNumber++;
+    }
+  }
+  return countNumber;
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+
+//6.c
+function countBs2(string) {
+  return countChar(string, "B");
+}
+
+console.log("\n")
+console.log(countBs("Benjamin"));
+// → 1
+console.log(countChar("kakkerlak", "k"));
+// → 4
