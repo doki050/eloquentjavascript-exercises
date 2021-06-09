@@ -8,6 +8,7 @@ body {
     font-size: 10px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: linear-gradient(to right ,#525252, #3d72b4);
+    background-size: cover;
 }
 
 h1 {
